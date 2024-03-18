@@ -1,5 +1,2 @@
-*
-
-!.gitingore
-!Makefile
-!/src
+inputs/
+bin/

@@ -42,7 +42,7 @@ int main() {
 
     while (true) {
         string hash = md5(input + to_string(i));
-        if (hash.substr(0, 5) == "00000") {
+        if (hash.substr(0, 6) == "000000") {
             cout << "Answer: " << i << endl;
             break;
         }
