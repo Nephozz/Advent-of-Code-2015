@@ -12,14 +12,14 @@ int isForbidden(string s) {
 }
 
 int isPairWithoutOverlap(string s) {
-    for (int i = 0; i < s.length() - 1; i++) {
+    for (int i = 0; i < (int)s.length() - 1; i++) {
         if (s.find(s.substr(i, 2), i + 2) != string::npos) return 1;
     }
     return 0;
 }
 
 int isRepeatingLetter(string s) {
-    for (int i = 0; i < s.length() - 2; i++) {
+    for (int i = 0; i < (int)s.length() - 2; i++) {
         if (s[i] == s[i + 2]) return 1;
     }
     return 0;
@@ -39,7 +39,7 @@ int main() {
         int pairWithoutOverlap = 0;
         int repeatingLetter = 0;
 
-        for (int i = 0; i < line.length(); i++) {
+        for (int i = 0; i < (int)line.length(); i++) {
             if (isVowel(line[i])) vowels++;
             if (line[i] == line[i + 1]) doubleLetter++;
             if (isForbidden(line.substr(i, 2))) forbidden++;
